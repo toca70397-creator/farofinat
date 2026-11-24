@@ -1,0 +1,8 @@
+body{margin:0;background:#0e0e11;color:#f1f0f4;font:16px/1.65 system-ui,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:48px 24px 80px}
+h1{font-size:34px;line-height:1.2;margin:0 0 12px;background:linear-gradient(120deg,#ff8a65,#f2709c 50%,#9b7bff);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:20px;margin:32px 0 8px}
+a{color:#f2709c}
+code{background:#ffffff14;padding:1px 6px;border-radius:6px;font-size:14px}
+.muted{color:#7d7b86;font-size:14px}
+li{margin:4px 0}

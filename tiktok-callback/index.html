@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Farofinat — connecting TikTok…</title>
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0e0e11;color:#f1f0f4;font:15px/1.5 system-ui,"Segoe UI",sans-serif;text-align:center;padding:24px}a{color:#f2709c}</style>
+</head>
+<body>
+<div>
+  <p>Connecting your TikTok account to Farofinat Promo Hub…</p>
+  <p id="m" style="color:#7d7b86;font-size:13px"></p>
+</div>
+<script>
+  // TikTok returns here (https). Farofinat Promo Hub runs on the owner's own computer,
+  // so we hand the authorization result straight to it. Nothing is stored on this page.
+  (function () {
+    var q = new URLSearchParams(location.search);
+    if (!q.get("state") || !(q.get("code") || q.get("error"))) {
+      document.getElementById("m").textContent = "No authorization data. Start the connection from the Farofinat app.";
+      return;
+    }
+    var target = "http://localhost:3000/api/oauth/tiktok/callback" + location.search;
+    document.getElementById("m").innerHTML = 'If nothing happens, <a href="' + target.replace(/"/g, "&quot;") + '">continue</a>.';
+    location.replace(target);
+  })();
+</script>
+</body>
+</html>
